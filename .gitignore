@@ -1,0 +1,34 @@
+# --- Binaries and Executables ---
+# Compiled binaries (common names)
+OpusGoLlama
+bin/
+*.exe
+*.exe_with_debug
+*.dll
+*.so
+*.dylib
+
+# --- Go Specifics ---
+# Go toolchain artifacts
+go.work
+go.work.sum
+
+# --- GoLand (JetBrains) Specifics ---
+# This ignores the entire .idea folder except for files that might be shared
+.idea/
+*.iwu
+*.iws
+
+# --- macOS Specifics ---
+# System files that clutter directories
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# --- Environment and Logs ---
+*.log
+.env
+.env.*
+
