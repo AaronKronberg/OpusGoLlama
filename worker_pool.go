@@ -25,7 +25,7 @@ import (
 )
 
 const (
-	defaultConcurrency         = 3                   // max parallel Ollama requests (GPU-bound)
+	defaultConcurrency         = 2                   // max parallel Ollama requests (GPU-bound)
 	defaultModel               = "qwen2.5-coder:14b" // fallback when task doesn't specify a model
 	defaultTaskTimeoutSec      = 600                  // 10 minutes per task
 	defaultPostWriteCmdTimeout = 30 * time.Second     // timeout for post-write commands (e.g. gofmt)

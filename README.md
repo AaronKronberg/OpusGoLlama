@@ -201,7 +201,7 @@ To pass environment variables:
 
 ```bash
 claude mcp add --transport stdio --scope user \
-  -e WORKER_CONCURRENCY=3 \
+  -e WORKER_CONCURRENCY=2 \
   -e DEFAULT_MODEL=llama3.1:8b \
   -e OLLAMA_HOST=http://127.0.0.1:11434 \
   OpusGoLlama -- /absolute/path/to/OpusGoLlama
@@ -225,7 +225,7 @@ Create a `.mcp.json` file in your project root:
     "OpusGoLlama": {
       "command": "/absolute/path/to/OpusGoLlama",
       "env": {
-        "WORKER_CONCURRENCY": "3",
+        "WORKER_CONCURRENCY": "2",
         "DEFAULT_MODEL": "llama3.1:8b",
         "OLLAMA_HOST": "http://127.0.0.1:11434"
       }
@@ -302,7 +302,7 @@ All configuration is via environment variables, passed with `-e` flags when usin
 | Variable | Default | Description |
 |---|---|---|
 | `OLLAMA_HOST` | `http://127.0.0.1:11434` | Ollama API address. Only change this if Ollama is running on a different port or machine. |
-| `WORKER_CONCURRENCY` | `3` | Max number of parallel Ollama requests. Bounded by your GPU memory — a 14B model on a 36GB M3 Pro handles 3 comfortably. |
+| `WORKER_CONCURRENCY` | `2` | Max number of parallel Ollama requests. Bounded by your GPU memory — a 14B model on a 36GB M3 Pro handles 2 comfortably. |
 | `DEFAULT_MODEL` | `qwen2.5-coder:14b` | Fallback model when tasks don't specify one. Must already be pulled in Ollama (`ollama pull <model>`). |
 | `TASK_TIMEOUT` | `600` | Default per-task timeout in seconds (10 minutes). Claude can override this per-task via `timeout_seconds` in `submit_tasks`. |
 

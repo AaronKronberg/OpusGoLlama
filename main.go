@@ -14,7 +14,7 @@
 //
 // Configuration via environment variables:
 //   - OLLAMA_HOST:         Ollama API address (default: http://127.0.0.1:11434)
-//   - WORKER_CONCURRENCY:  max parallel Ollama requests (default: 3)
+//   - WORKER_CONCURRENCY:  max parallel Ollama requests (default: 2)
 //   - DEFAULT_MODEL:       fallback model when tasks don't specify one (default: qwen2.5-coder:14b)
 //   - TASK_TIMEOUT:        default per-task timeout in seconds (default: 600)
 package main
